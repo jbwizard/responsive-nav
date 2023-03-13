@@ -5,10 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navigation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fcbefbe92f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <h5>FUZZYEYE</h5>
+            <ul class="nav" id="nav-menu">
+                <li class="drop" id="drop-nav">
+                    <div class="dropdown">
+                        <button class="dropbtn">Mens
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">T-shirts</a>
+                            <a href="#">Jackets</a>
+                            <a href="#">Acessories</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="menu-item" href="#">Womens</a></li>
+                <li><a class="menu-item" href="#">Culture</a></li>
+                <li><a class="menu-item" href="#">Sustainability</a></li>
+                <li><a class="menu-item" href="#">Sale</a></li>
+            </ul>
+            <a class="burger" onclick="burgerMenu()"><i class="fa fa-bars fa-2x"></i></a>    
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <img src="images/homepage.jpg" alt="girl on a t-shirt">
+        </div>
+    </main>
+
+    <script>
+        function burgerMenu() {
+            let burger = document.getElementById("nav-menu");
+            if (burger.className === "nav") {
+            burger.className += " responsive";
+            } else {
+            burger.className = "nav";
+            }
+        }
+
+        function dropNav() {
+            let drop = document.getElementById("drop-nav");
+            if (drop.className === "drop") {
+              drop.className += " responsive";
+            } else {
+              drop.className = "drop";
+            }
+          }
+    </script>
 </body>
 </html>
