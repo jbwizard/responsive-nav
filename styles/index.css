@@ -61,14 +61,22 @@ a:hover{
 }
 
 
+
 .dropdown:hover .dropdown-content {
     display: block;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    margin: 5px;
   }
 
 
 .dropdown-content{
     display: none;
+    position: absolute;
+    width: 100px;
 }  
 
 .dropbtn{
@@ -84,10 +92,7 @@ a:hover{
 
 }
 
-.drop.responsive{
-    display: block;
-    background: #EB6F15;
-}
+
 
 
   
